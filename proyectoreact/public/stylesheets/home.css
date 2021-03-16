@@ -27,9 +27,10 @@ div.columnas {
   height: auto;
 } */
 
-#paraSacarMargen{
+/* #paraSacarMargen{
   margin-top: 0% !important;
-}
+} */ 
+/* esto era para class tarjetas */
 
 .contenedor{
   margin: 0 auto;
