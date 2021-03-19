@@ -1,4 +1,6 @@
 import Tira from './components/Tira'
+import Header from './components/Header'
+import Tarjeta from './components/Tarjeta'
 
 
 function App() {
@@ -6,10 +8,8 @@ function App() {
     <div className="App">
      
      { /*componente tira */}
-     <Tira/>
+     <Header/>
      
-     <Tira/>
-
      <Tira/>
 
      <footer id="footer">
