@@ -4,10 +4,10 @@ import Tarjeta from './Tarjeta'
 function Tira(params) {
     return (
         <ul> 
-       <Tarjeta nombreyapellido="" email="" nacimientoyedad=""/>
+       <Tarjeta nombreyapellido="ema" email="" nacimientoyedad=""/>
        {/* vamos a ver como pasarle informaicon a esta tarjeta */}
-       <Tarjeta nombreyapellido="" email="" nacimientoyedad=""/>
-       <Tarjeta nombreyapellido="" email="" nacimientoyedad=""/>
+       <Tarjeta nombreyapellido="agus" email="" nacimientoyedad=""/>
+       <Tarjeta nombreyapellido="marcos" email="" nacimientoyedad=""/>
 
      </ul>
     );
