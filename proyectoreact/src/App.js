@@ -1,6 +1,5 @@
 import Tira from './components/Tira'
 import Header from './components/Header'
-import Tarjeta from './components/Tarjeta'
 
 
 function App() {
