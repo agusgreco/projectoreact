@@ -22,7 +22,7 @@ function App() {
           <div className="col-md-4">
             <ul className="list-inline nombres text-center">
              <li className="text-white"><a target="_blank" rel="noopener noreferrer" className="text-white" href="https://www.instagram.com/agusgreco_/">Agustina Greco</a></li>
-             <li className="text-white"><a target="_blank" rel="noopener noreferrer" className="text-white" href="https://www.instagram.com/emajrz/">Emma Juarez</a></li>
+             <li className="text-white"><a target="_blank" rel="noopener noreferrer" className="text-white" href="https://www.instagram.com/emajrz/">Ema Juarez</a></li>
             </ul>
           </div>
         </div>
