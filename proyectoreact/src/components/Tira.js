@@ -1,13 +1,32 @@
 import Tarjeta from './Tarjeta'
+const arrayTarjetas = [
+    {
+        nombreyapellido:"Agus",
+        email:"@mail",
+        nacimientoyedad: "1/3/02"
+    },
+    {
+        nombreyapellido:"Emma", 
+        email:"@mail", 
+        nacimientoyedad:"1/4/02"   
+    },
+    {
+        nombreyapellido:"Kane",
+        email:"@mail", 
+        nacimientoyedad:"1/3/02"
+    }
+]
 
 //siempre se llama igual al archivo
 function Tira(params) {
     return (
         <ul> 
-       <Tarjeta nombreyapellido="ema" email="" nacimientoyedad=""/>
-       {/* vamos a ver como pasarle informaicon a esta tarjeta */}
-       <Tarjeta nombreyapellido="agus" email="" nacimientoyedad=""/>
-       <Tarjeta nombreyapellido="marcos" email="" nacimientoyedad=""/>
+       { arrayTarjetas.map(function(unaTarjeta, idx){
+            return (
+                <div key={idx}>
+                    <Tarjeta tarjetaAMostrar={unaTarjeta}/>
+                </div>
+      )}) }     
 
      </ul>
     );
