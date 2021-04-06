@@ -20,15 +20,15 @@ const arrayTarjetas = [
 //siempre se llama igual al archivo
 function Tira(params) {
     return (
-        <ul> 
-       { arrayTarjetas.map(function(unaTarjeta, idx){
-            return (
-                <div key={idx}>
-                    <Tarjeta tarjetaAMostrar={unaTarjeta}/>
-                </div>
-      )}) }     
+        <div className="rowbody">
+            { arrayTarjetas.map(function(unaTarjeta, idx){
+                return (
+                    <div className="unaTarjeta" key={idx}>
+                        <Tarjeta tarjetaAMostrar={unaTarjeta}/>
+                    </div>
+            )}) }     
 
-     </ul>
+        </div>
     );
 }
 

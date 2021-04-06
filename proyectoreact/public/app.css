@@ -1,0 +1,111 @@
+*{box-sizing: border-box;
+}
+
+body{
+    margin:0%;
+}
+
+/* ul{
+    padding-top: 7%;
+    padding-left: 0%;
+    /* padding-right: 0%; */
+/* } */ */
+
+
+.unaTarjeta{
+width: 100%;
+padding: 0%;
+padding-right: 0%;
+}
+
+header{
+    background-color: #000d1e;
+}
+.ache1{
+    background-color: #000d1e;
+    text-align: center;
+    font-family: verdana;
+    color: #38D7D2;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+html{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    padding-left: 0%;
+    margin-left: 0%;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+
+.rowbody{
+ padding-top: 8%;
+}
+
+.tarjeta-text{
+    width: 32%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: center;
+    color: #B5A44E;
+    background-color: #574E25;
+    margin-left: 1%;
+    margin-right: 0%;
+    margin-top: 3%;
+    float: left;
+}
+
+footer{
+    background-color: #000d1e;
+    text-align: center;
+    font-family: verdana;
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
+
+}
+
+.footerclass{
+    padding-bottom: 1.5em;
+}
+
+a{
+    color: #38D7D2; 
+    text-decoration: none;
+    margin-bottom: 3%;
+
+}
+
+
+
+
+
+
+.App{
+    padding-left: 0%;
+    width: 100%;
+}
+
+img{
+    width: 90%;
+}
+
+.words{
+    width:100%;
+}
+
+
+
+
+
