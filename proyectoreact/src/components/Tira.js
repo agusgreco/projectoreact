@@ -1,4 +1,6 @@
-import Tarjeta from './Tarjeta'
+import Tarjeta from './Tarjeta';
+import {Component} from 'react';
+
 const arrayTarjetas = [
     {
         nombreyapellido:"Agus",
@@ -17,19 +19,36 @@ const arrayTarjetas = [
     }
 ]
 
-//siempre se llama igual al archivo
-function Tira(params) {
-    return (
+class Tira extends Component{
+
+    constructor(){
+        super();
+        this.state ={
+            datos: arrayTarjetas,
+        }
+     }  
+
+
+     borrarItem(idTarjeta){
+        let resultado = this.state.datos.filter( (dato) => {
+          return dato.id !== idTarjeta
+        });
+        this.setState({datos: resultado});
+        console.log(this.state.datos)
+     }
+
+     render(){
+      return (
         <div className="rowbody">
-            { arrayTarjetas.map(function(unaTarjeta, idx){
-                return (
-                    <div className="unaTarjeta" key={idx}>
-                        <Tarjeta tarjetaAMostrar={unaTarjeta}/>
-                    </div>
-            )}) }     
+            {this.state.datos.map((unaTarjeta, idx) =>(
+                <div className="unaTarjeta" key={idx}>
+                  <Tarjeta tarjetaAMostrar={unaTarjeta}  onBorrar={this.borrarItem.bind(this)}/>
+                </div>
+            )) }
 
         </div>
-    );
+      )
+    }
 }
 
 export default Tira;
