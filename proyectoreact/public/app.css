@@ -24,6 +24,28 @@ body{
     background-color: #000d1e;
     height: 50px;
 }
+.boton{
+    margin-left: 50px;
+    width: 130px;
+    height: 28px;
+    background-color: #000d1e;
+    border-radius: 7px;
+    border-width: 0px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+.botonn{
+    margin-left: 5px;
+    width: 100px;
+    height: 28px;
+    background-color: #000d1e;
+    border-radius: 7px;
+    border-width: 0px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
 .ache1{
     background-color: #000d1e;
     text-align: center;
