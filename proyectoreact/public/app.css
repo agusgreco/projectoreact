@@ -18,8 +18,9 @@ padding: 0%;
 padding-right: 0%;
 }
 
-header{
+.header{
     background-color: #000d1e;
+    height: 50px;
 }
 .ache1{
     background-color: #000d1e;

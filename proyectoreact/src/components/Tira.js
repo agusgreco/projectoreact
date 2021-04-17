@@ -37,7 +37,6 @@ class Tira extends Component{
           console.log(data)
         })
       }
-
       
      borrarItem(idTarjeta){
         let resultado = this.state.datos.filter( (dato) => {
