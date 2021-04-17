@@ -56,8 +56,12 @@ class Tira extends Component{
         })
       }
 
-      filtrarTarjetas(){
-
+      filtrarTarjetas(lobuscado){
+        let resultado = this.state.datos.filter( (dato) => {
+          return dato.id === lobuscado
+        });
+        this.setState({datos: resultado});
+        console.log(this.state.datos)
       }
 
 
@@ -65,11 +69,17 @@ class Tira extends Component{
       return (
         <div className="rowbody">
             <div className="center">
-           <button className="boton" onClick={this.agregarTarjetas.bind(this)} > Agregar Tarjetas </button>
+                <button className="boton" onClick={this.agregarTarjetas.bind(this)} > Agregar Tarjetas </button>
           
                 {/* <input type="search" placeholder="Search" aria-label="Search"> */}
-                <button className="botonn" onClick={this.filtrarTarjetas.bind(this)}>Filtrar</button>
+                {/* <button className="botonn" onClick={this.filtrarTarjetas.bind(this)}>Filtrar</button> */}
+                <form action="/" method="get">
+                     <input type="text" id="header-search" placeholder="Filtrar"/>
+                     <button className="botonn" onClick={this.filtrarTarjetas.bind(this)} type="submit"></button>
+                </form>
+               
                 </div>
+
            {this.state.datos.map((unaTarjeta, idx) =>(
                 <div className="unaTarjeta" key={idx}>
                   <Tarjeta tarjetaAMostrar={unaTarjeta}  onBorrar={this.borrarItem.bind(this)}/>
