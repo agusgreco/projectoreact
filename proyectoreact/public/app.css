@@ -24,8 +24,12 @@ body{
     background-color: #000d1e;
     height: 50px;
 }
+.center{
+    align-items: center;
+}
 .boton{
-    margin-left: 42%;
+    /* margin-left: 42%; */
+    align-items: center;
     margin-top: -50px;
     width: 130px;
     height: 28px;
