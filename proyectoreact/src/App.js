@@ -19,10 +19,9 @@ function App() {
           </div>
 
           <div className="footerclass">
-            <ul className="list-inline nombres text-center">
-             <li className="text-white"><a target="_blank" rel="noopener noreferrer" className="text-white" href="https://www.instagram.com/agusgreco_/">Agustina Greco</a></li>
-             <li className="text-white"><a target="_blank" rel="noopener noreferrer" className="text-white" href="https://www.instagram.com/emajrz/">Ema Juarez</a></li>
-            </ul>
+           <a target="_blank" rel="noopener noreferrer" className="text-white" href="https://www.instagram.com/agusgreco_/">Agustina Greco -  </a>
+            <a target="_blank" rel="noopener noreferrer" className="text-whitee" href="https://www.instagram.com/emajrz/">Ema Juarez</a>
+            
           </div>
         </div>
       </div>

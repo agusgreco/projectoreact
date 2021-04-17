@@ -22,7 +22,7 @@ body{
 
 .header{
     background-color: #000d1e;
-    height: 50px;
+    height: 100px;
 }
 .center{
     text-align: center;
@@ -30,7 +30,7 @@ body{
 .boton{
     /* margin-left: 42%; */
     align-items: center;
-    margin-top: -50px;
+    margin-top: 10px;
     width: 130px;
     height: 28px;
     background-color: #000d1e;
@@ -66,7 +66,7 @@ body{
     height: 10px;
 }
 .titulo{
-    margin-top: -15px;
+    margin-top: -5px;
 }
 
 html{
@@ -82,6 +82,7 @@ html{
     position: fixed;
     top: 0;
     width: 100%;
+    height: 100px;
   }
 
 .rowbody{
@@ -122,21 +123,23 @@ footer{
     font-family: verdana;
     position: fixed;
     width: 100%;
-    height: 60;
+    height: 50px;
     bottom: 0%;
 }
 
 a{
     color: #38D7D2; 
     text-decoration: none;
-    margin-bottom: 3%;
+    /* margin-bottom: 3%; */
+    /* padding-top: -50px; */
 
 }
-
-
-
-
-
+.text-white{
+    margin-top: -20px;
+}
+.text-whitee{
+    margin-top: -10px;
+}
 
 .App{
     padding-left: 0%;
