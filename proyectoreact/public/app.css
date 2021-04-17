@@ -105,8 +105,8 @@ html{
     border-radius: 5px;
 }
 .borrar{
-    width: 110px;
-    height: 28px;
+    width: 80px;
+    height: 25px;
     background-color: #000d1e;
     border-radius: 7px;
     border-width: 0px;
@@ -130,15 +130,6 @@ footer{
 a{
     color: #38D7D2; 
     text-decoration: none;
-    /* margin-bottom: 3%; */
-    /* padding-top: -50px; */
-
-}
-.text-white{
-    margin-top: -20px;
-}
-.text-whitee{
-    margin-top: -10px;
 }
 
 .App{
