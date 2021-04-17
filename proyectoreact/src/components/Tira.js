@@ -24,18 +24,10 @@ class Tira extends Component{
     constructor(){
         super();
         this.state ={
-            datos: [],
+            datos: arrayTarjetas,
         }
      }  
 
-     componentDidMount(){
-        fetch("https://randomuser.me/api/")
-        .then(result => result.json())
-        .then(data => {
-          this.setState({datos: data.results)
-          console.log(data)
-        })
-      } 
 
      borrarItem(idTarjeta){
         let resultado = this.state.datos.filter( (dato) => {
