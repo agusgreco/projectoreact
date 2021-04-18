@@ -39,12 +39,13 @@ class Tarjeta extends Component {
 
                     <div className="tarjeta-text">
 
+                      <div className="x">
+                        <button type="button" className="borrar" onClick={this.props.onBorrar.bind(this, this.props.tarjetaAMostrar.id)}>  x </button>
+                        </div>
                        {/* <div className="tarjeta-text" style={{ width: this.state.tamano}}
                           onMouseEnter={ () => this.verDetalle("48%")}
                           onMouseLeave={ () => this.verDetalle(this.state.tamanoOriginal)}> */}
-                          <div className="x">
-                        <button type="button" className="borrar" onClick={this.props.onBorrar.bind(this, this.props.tarjetaAMostrar.id)}>X</button>
-                        </div>
+                         
                         <div className="image"> 
                           <img alt="foto" src={this.props.tarjetaAMostrar.picture.large}/> 
                         </div>

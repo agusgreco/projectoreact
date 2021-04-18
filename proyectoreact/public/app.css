@@ -115,11 +115,12 @@ html{
     color: white;
     cursor: pointer;
     padding-right: 5px;
+    text-align: center;
 }
 .x{
     width: 100%;
     text-align: end;
-
+    padding-left: 380px;
 }
 
 footer{
