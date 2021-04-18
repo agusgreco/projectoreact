@@ -75,7 +75,7 @@ class Tira extends Component{
                 {/* <button className="botonn" onClick={this.filtrarTarjetas.bind(this)}>Filtrar</button> */}
                 <form action="/" method="get">
                      <input type="text" id="header-search" placeholder="Filtrar"/>
-                     <button className="botonn" onClick={this.filtrarTarjetas.bind(this)} type="submit"></button>
+                     <button className="botonn" onClick={this.filtrarTarjetas.bind(this)} type="submit">ENTER</button>
                 </form>
                
                 </div>
