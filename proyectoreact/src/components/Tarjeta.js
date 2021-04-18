@@ -33,13 +33,13 @@ class Tarjeta extends Component {
 
                     <div className="tarjeta-text">
                         <div className="image"> 
-                          <img alt="foto" src={this.props.tarjetaAMostrar.picture.medium}/> 
+                          <img alt="foto" src={this.props.tarjetaAMostrar.picture.large}/> 
                         </div>
                         <div className="nombreyapellido words"> {this.props.tarjetaAMostrar.name.first} {this.props.tarjetaAMostrar.name.last} </div>
                         <div className="email words"> {this.props.tarjetaAMostrar.email}</div>
                         <div className="nacimientoyedad words">{this.props.tarjetaAMostrar.dob.date} - {this.props.tarjetaAMostrar.dob.age} ys </div>
                         {/* <button type="button"onClick={this.props.verDetalle.bind(this, this.props.tarjetaAMostrar.id)}>Ver detalle</button> */}
-                        {/* <button type="button" onClick={this.props.onBorrar.bind(this, this.props.tarjetaAMostrar.id)}>Borrar</button> */}
+                        <button type="button" onClick={this.props.onBorrar.bind(this, this.props.tarjetaAMostrar.id)}>Borrar</button>
                     </div>
 
         </div>
