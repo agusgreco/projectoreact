@@ -30,7 +30,7 @@ class Tira extends Component{
 
 
      componentDidMount(){
-        fetch("https://randomuser.me/api/?results=10")
+        fetch("https://randomuser.me/api/?results=12")
         .then(result => result.json())
         .then(data => {
           this.setState({datos: data.results})
@@ -47,8 +47,8 @@ class Tira extends Component{
      }
 
      agregarTarjetas(){
-        console.log("se agregaron 10 tarjetas")
-        fetch("https://randomuser.me/api/?results=10")
+        console.log("se agregaron 12 tarjetas")
+        fetch("https://randomuser.me/api/?results=12")
         .then(result => result.json())
         .then(data => {
           this.state.datos.push(data.results);
