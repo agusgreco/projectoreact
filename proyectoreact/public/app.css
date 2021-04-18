@@ -57,7 +57,7 @@ body{
     background-color: #000d1e;
     text-align: center;
     font-family: verdana;
-    color: #38D7D2;
+    color: #4b7472;
     margin-top: 0%;
     margin-bottom: 0%;
     margin-block-start: 0%;
@@ -94,7 +94,7 @@ html{
     width: 32%;
     padding-left: 3%;
     padding-right: 3%;
-    padding-top: 15px;
+    padding-top: 5px;
     padding-bottom: 15px;
     text-align: center;
     color: #B5A44E;
@@ -106,16 +106,22 @@ html{
     border-radius: 5px;
 }
 .borrar{
-    width: 80px;
-    height: 25px;
-    background-color: #000d1e;
+    width: 20px;
+    height: 20px;
+    background-color:rgb(172, 47, 47);
     border-radius: 7px;
     border-width: 0px;
     margin: 5px;
     font-size: 13px;
     color: white;
     cursor: pointer;
-
+    padding-right: 5px;
+    text-align: center;
+}
+.x{
+    width: 100%;
+    text-align: end;
+    padding-left: 380px;
 }
 
 footer{
@@ -129,7 +135,7 @@ footer{
 }
 
 a{
-    color: #38D7D2; 
+    color: #4b7472; 
     text-decoration: none;
 }
 
