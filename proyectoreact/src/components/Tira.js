@@ -69,7 +69,7 @@ class Tira extends Component{
       return (
         <div className="rowbody">
             <div className="center">
-                <button className="boton" onClick={this.agregarTarjetas.bind(this)} > Agregar Tarjetas </button>
+                <button className="boton" onClick={this.agregarTarjetas.bind(this)} > AGREGAR TARJETAS </button>
           
                 {/* <input type="search" placeholder="Search" aria-label="Search"> */}
                 {/* <button className="botonn" onClick={this.filtrarTarjetas.bind(this)}>Filtrar</button> */}

@@ -56,7 +56,7 @@ class Tarjeta extends Component {
 
 
                         {/* <button type="button" onClick={this.props.verDetalle.bind(this, this.props.tarjetaAMostrar.id)}>Ver detalle</button> */}
-                        <button type="button" className="borrar" onClick={this.props.onBorrar.bind(this, this.props.tarjetaAMostrar.id)}>Borrar</button>
+                        <button type="button" className="borrar" onClick={this.props.onBorrar.bind(this, this.props.tarjetaAMostrar.id)}>x</button>
                     </div>
 
         </div>
