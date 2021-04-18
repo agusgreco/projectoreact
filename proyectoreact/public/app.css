@@ -32,7 +32,7 @@ body{
     /* margin-left: 42%; */
     align-items: center;
     margin-top: 10px;
-    width: 130px;
+    width: 170px;
     height: 28px;
     background-color: #000d1e;
     border-radius: 7px;
@@ -40,6 +40,11 @@ body{
     font-size: 15px;
     color: white;
     cursor: pointer;
+}
+.input{
+    border-radius: 5px;
+    height: 28px;
+    width: 100px;
 }
 .botonn{
     margin-left: 5px;
