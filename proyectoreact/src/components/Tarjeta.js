@@ -32,6 +32,9 @@ class Tarjeta extends Component {
       //     console.log("viendo detalle");
       //   }
       // }
+
+      
+
    
    render(){
     return (

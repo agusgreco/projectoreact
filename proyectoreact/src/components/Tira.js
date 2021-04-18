@@ -64,6 +64,15 @@ class Tira extends Component{
         console.log(this.state.datos)
       }
 
+      cambiarVertice(hov){
+        if(this.state.tamanoOriginal !== "48%"){
+          this.setState({
+            tamanoOriginal: hov,
+          });
+          console.log("de horizontal a vertical o al revez");
+        }
+      }
+
 
      render(){
       return (
@@ -78,6 +87,8 @@ class Tira extends Component{
                      <button className="botonn" onClick={this.filtrarTarjetas.bind(this)} type="submit">ENTER</button>
                 </form>
                
+                <button type="button" className="borrar" onClick={this.props.cambiarVertice.bind(this, this.props.tarjetaAMostrar.id)}> CAMBIAR VERTICE </button>
+
                 </div>
 
            {this.state.datos.map((unaTarjeta, idx) =>(
