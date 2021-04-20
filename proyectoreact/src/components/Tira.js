@@ -1,30 +1,13 @@
 import Tarjeta from './Tarjeta';
 import {Component} from 'react';
 
-// const arrayTarjetas = [
-//     {
-//         nombreyapellido:"Agus",
-//         email:"@mail",
-//         nacimientoyedad: "1/3/02"
-//     },
-//     {
-//         nombreyapellido:"Emma", 
-//         email:"@mail", 
-//         nacimientoyedad:"1/4/02"   
-//     },
-//     {
-//         nombreyapellido:"Kane",
-//         email:"@mail", 
-//         nacimientoyedad:"1/3/02"
-//     }
-// ]
-
 class Tira extends Component{
 
     constructor(){
         super();
         this.state ={
             datos: [],
+
         }
      }  
 
@@ -65,9 +48,9 @@ class Tira extends Component{
       }
 
       cambiarVertice(hov){
-        if(this.state.tamanoOriginal !== "48%"){
+        if(this.state.vistaOriginal !== ""){
           this.setState({
-            tamanoOriginal: hov,
+            vistaOriginal: hov,
           });
           console.log("de horizontal a vertical o al revez");
         }
@@ -86,16 +69,17 @@ class Tira extends Component{
                      <input type="text" className="input" id="header-search" placeholder="Filtrar"/>
                      <button className="botonn" onClick={this.filtrarTarjetas.bind(this)} type="submit">ENTER</button>
                 </form>
-               
-                <button type="button" className="borrar" onClick={this.props.cambiarVertice.bind(this, this.props.tarjetaAMostrar.id)}> CAMBIAR VERTICE </button>
+                <button type="button" className="vertice" onClick={this.cambiarVertice.bind(this)}> CAMBIAR VERTICE </button>
 
                 </div>
+              <div className="acaEstanLasTarjetas">
 
            {this.state.datos.map((unaTarjeta, idx) =>(
                 <div className="unaTarjeta" key={idx}>
                   <Tarjeta tarjetaAMostrar={unaTarjeta}  onBorrar={this.borrarItem.bind(this)}/>
                 </div>
             )) }
+            </div>
 
         </div>
       )
