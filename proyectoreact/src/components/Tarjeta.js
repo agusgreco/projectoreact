@@ -4,7 +4,8 @@ class Tarjeta extends Component {
     constructor(){
         super();
         this.state ={
-          tamanoOriginal: "32%"
+          tamanoOriginal: "32%",
+          // tamanoNuevo: "48%"
         }
       }
 
@@ -24,14 +25,14 @@ class Tarjeta extends Component {
         console.log("Se borro la tarjeta "+ this.props.id);
       }
 
-      // verDetalle(tamano){
-      //   if(this.state.tamanoOriginal !== "48%"){
-      //     this.setState({
-      //       tamanoOriginal: tamano,
-      //     });
-      //     console.log("viendo detalle");
-      //   }
-      // }
+      verDetalle(tamano){
+        if(this.state.tamanoOriginal !== "48%"){
+          this.setState({
+            tamanoOriginal: tamano,
+          });
+          console.log("viendo detalle");
+        }
+      }
 
       
 
@@ -53,7 +54,7 @@ class Tarjeta extends Component {
                           <img alt="foto" src={this.props.tarjetaAMostrar.picture.large}/> 
                         </div>
                         <div className="nombreyapellido words"> {this.props.tarjetaAMostrar.name.first} {this.props.tarjetaAMostrar.name.last} </div>
-                        <div className="email words"> {this.props.tarjetaAMostrar.email}</div>
+                        <div className="email words"> email: {this.props.tarjetaAMostrar.email}</div>
                         <div className="nacimientoyedad words">{this.props.tarjetaAMostrar.dob.date} - {this.props.tarjetaAMostrar.dob.age} ys </div>
                         
                         {/* <div className="location words">{this.props.tarjetaAMostrar.location.street} {this.props.tarjetaAMostrar.location.city} {this.props.tarjetaAMostrar.location.state} {this.props.tarjetaAMostrar.location.postcode}</div> */}
@@ -62,6 +63,7 @@ class Tarjeta extends Component {
 
 
                         {/* <button type="button" onClick={this.props.verDetalle.bind(this, this.props.tarjetaAMostrar.id)}>Ver detalle</button> */}
+                        
                     </div>
 
         </div>
