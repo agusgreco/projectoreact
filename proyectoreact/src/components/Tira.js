@@ -6,15 +6,12 @@ class Tira extends Component{
     constructor(){
         super();
         this.state ={
-            datos: [],
+          datos: [],
           value: "",
-
         }
      }  
-
-
      componentDidMount(){
-        fetch("https://randomuser.me/api/?results=1")
+        fetch("https://randomuser.me/api/?results=12")
         .then(result => result.json())
         .then(data => {
           this.setState({datos: data.results})
@@ -45,13 +42,13 @@ class Tira extends Component{
       }
 
       filtrarTarjetas(lobuscado){
-        let resultado = this.state.datos.filter( (dato) => {
-          return dato.name.first === lobuscado
+        let resultado = this.state.datos.filter( (persona) => {
+          return persona.name.first === lobuscado
         });
         this.setState({value: resultado});
         console.log(this.state.datos)
       }
-
+      
       cambiarVertice(hov){
         if(this.state.vistaOriginal !== ""){
           this.setState({
@@ -61,7 +58,6 @@ class Tira extends Component{
         }
       }
 
-
      render(){
       return (
         <div className="rowbody">
@@ -70,9 +66,11 @@ class Tira extends Component{
                 {this.state.value}
                 {/* <input type="search" placeholder="Search" aria-label="Search"> */}
                 {/* <button className="botonn" onClick={this.filtrarTarjetas.bind(this)}>Filtrar</button> */}
-                <form action="/" method="get">
-                     Nombre: <input type="text" value={this.state.value} className="input" id="header-search" placeholder="Filtrar"  onChange={this.filtrarPorNombre.bind(this)}/>
-                     <button className="botonn" onClick={this.filtrarTarjetas.bind(this)} type="submit">ENTER</button>
+                <form action="/" method="get" onSubmit={this.filtrarTarjetas.bind(this)}>
+                    Nombre: <input type="text" value={this.state.value} className="input" id="header-search" placeholder="Filtrar"
+                            onChange={this.filtrarPorNombre.bind(this)}/>
+                    <button className="botonn" type="submit" value="Submit">ENTER</button>
+                             {/* onClick={this.filtrarTarjetas.bind(this)} */}
                 </form>
                 <button type="button" className="vertice" onClick={this.cambiarVertice.bind(this)}> CAMBIAR VERTICE </button>
 
