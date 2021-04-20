@@ -7,13 +7,14 @@ class Tira extends Component{
         super();
         this.state ={
             datos: [],
+          value: "",
 
         }
      }  
 
 
      componentDidMount(){
-        fetch("https://randomuser.me/api/?results=12")
+        fetch("https://randomuser.me/api/?results=1")
         .then(result => result.json())
         .then(data => {
           this.setState({datos: data.results})
@@ -39,11 +40,15 @@ class Tira extends Component{
         })
       }
 
+      filtrarPorNombre(evento){
+        this.setState({value: evento.target.value})
+      }
+
       filtrarTarjetas(lobuscado){
         let resultado = this.state.datos.filter( (dato) => {
-          return dato.id === lobuscado
+          return dato.name.first === lobuscado
         });
-        this.setState({datos: resultado});
+        this.setState({value: resultado});
         console.log(this.state.datos)
       }
 
@@ -62,11 +67,11 @@ class Tira extends Component{
         <div className="rowbody">
             <div className="center">
                 <button className="boton" onClick={this.agregarTarjetas.bind(this)} > AGREGAR TARJETAS </button>
-          
+                {this.state.value}
                 {/* <input type="search" placeholder="Search" aria-label="Search"> */}
                 {/* <button className="botonn" onClick={this.filtrarTarjetas.bind(this)}>Filtrar</button> */}
                 <form action="/" method="get">
-                     <input type="text" className="input" id="header-search" placeholder="Filtrar"/>
+                     Nombre: <input type="text" value={this.state.value} className="input" id="header-search" placeholder="Filtrar"  onChange={this.filtrarPorNombre.bind(this)}/>
                      <button className="botonn" onClick={this.filtrarTarjetas.bind(this)} type="submit">ENTER</button>
                 </form>
                 <button type="button" className="vertice" onClick={this.cambiarVertice.bind(this)}> CAMBIAR VERTICE </button>
