@@ -29,10 +29,10 @@ class Tira extends Component{
 
      agregarTarjetas(){
         console.log("se agregaron 12 tarjetas")
-        fetch("https://randomuser.me/api/?results=12")
+        fetch("https://randomuser.me/api/?results=6")
         .then(result => result.json())
         .then(data => {
-          this.state.datos.push(data.results);
+          this.state.datos.push(data.result);
           this.setState({datos: this.state.datos})
         })
       }
@@ -72,8 +72,6 @@ class Tira extends Component{
             <div className="center">
                 <button className="boton" onClick={this.agregarTarjetas.bind(this)} > AGREGAR TARJETAS </button>
                 
-                {/* <input type="search" placeholder="Search" aria-label="Search"> */}
-                {/* <button className="botonn" onClick={this.filtrarTarjetas.bind(this)}>Filtrar</button> */}
 
                 {/* <form action="/" method="get" onSubmit={this.filtrarTarjetas.bind(this)}> */}
                 <form onSubmit={this.filtrarTarjetas.bind(this)}>
@@ -83,6 +81,20 @@ class Tira extends Component{
                     <button className="botonn" type="submit" value="Submit">ENTER</button>
                              {/* onClick={this.filtrarTarjetas.bind(this)} */}
                 </form>
+
+                <form onSubmit={this.filtrarTarjetas.bind(this)}>
+                  Apellido: {this.state.value}  
+                  <input type="text" value={this.state.value} className="input" id="header-search" placeholder="Filtrar" onChange={this.filtrarPorApellido.bind(this)}/>
+                  <button className="botonn" type="submit" value="Submit">ENTER</button>
+                </form>
+
+                <form onSubmit={this.filtrarTarjetas.bind(this)}>
+                  Edad: {this.state.value}  
+                  <input type="text" value={this.state.value} className="input" id="header-search" placeholder="Filtrar" onChange={this.filtrarPorEdad.bind(this)}/>
+                  <button className="botonn" type="submit" value="Submit">ENTER</button>
+                </form>
+
+
                 {/* <button type="button" className="vertice" onClick={this.cambiarVertice.bind(this)}> CAMBIAR VERTICE </button> */}
 
                 </div>
