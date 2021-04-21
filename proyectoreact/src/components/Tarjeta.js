@@ -64,9 +64,9 @@ class Tarjeta extends Component {
                         <div className="nacimientoyedad words">{this.props.tarjetaAMostrar.dob.date} - {this.props.tarjetaAMostrar.dob.age} ys </div>
                         
 
-                   {/* <button type="button" onClick={ () => this.verMas("")}>Ver detalle</button>
+                   {/* <button type="button" onClick={ () => this.verMas("block")}>Ver detalle</button>
                    <div  style={{display: this.state.visibilityNuevo}} 
-                  //  onClick={ () => this.verMas("")}
+                  //  onClick={ () => this.verMas("block")}
                   //  onMouseLeave={ () => this.verMas(this.state.visibilityOriginal)}
                    >
                         <div className="location words">{this.props.tarjetaAMostrar.location.street} {this.props.tarjetaAMostrar.location.city} {this.props.tarjetaAMostrar.location.state} {this.props.tarjetaAMostrar.location.postcode}</div>
