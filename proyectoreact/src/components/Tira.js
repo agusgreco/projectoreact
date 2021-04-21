@@ -41,9 +41,17 @@ class Tira extends Component{
         this.setState({value: evento.target.value})
       }
 
+      filtrarPorApellido(evento){
+        this.setState({value: evento.target.value})
+      }
+
+      filtrarPorEdad(evento){
+        this.setState({value: evento.target.value})
+      }
+
       filtrarTarjetas(lobuscado){
         let resultado = this.state.datos.filter( (persona) => {
-          return persona.name.first === lobuscado
+          return persona.name.first || persona.name.last || persona.dob.age === lobuscado
         });
         this.setState({value: resultado});
         console.log(this.state.datos)
@@ -63,16 +71,19 @@ class Tira extends Component{
         <div className="rowbody">
             <div className="center">
                 <button className="boton" onClick={this.agregarTarjetas.bind(this)} > AGREGAR TARJETAS </button>
-                {this.state.value}
+                
                 {/* <input type="search" placeholder="Search" aria-label="Search"> */}
                 {/* <button className="botonn" onClick={this.filtrarTarjetas.bind(this)}>Filtrar</button> */}
-                <form action="/" method="get" onSubmit={this.filtrarTarjetas.bind(this)}>
-                    Nombre: <input type="text" value={this.state.value} className="input" id="header-search" placeholder="Filtrar"
-                            onChange={this.filtrarPorNombre.bind(this)}/>
+
+                {/* <form action="/" method="get" onSubmit={this.filtrarTarjetas.bind(this)}> */}
+                <form onSubmit={this.filtrarTarjetas.bind(this)}>
+
+                    Nombre: {this.state.value}  
+                    <input type="text" value={this.state.value} className="input" id="header-search" placeholder="Filtrar" onChange={this.filtrarPorNombre.bind(this)}/>
                     <button className="botonn" type="submit" value="Submit">ENTER</button>
                              {/* onClick={this.filtrarTarjetas.bind(this)} */}
                 </form>
-                <button type="button" className="vertice" onClick={this.cambiarVertice.bind(this)}> CAMBIAR VERTICE </button>
+                {/* <button type="button" className="vertice" onClick={this.cambiarVertice.bind(this)}> CAMBIAR VERTICE </button> */}
 
                 </div>
               <div className="acaEstanLasTarjetas">
