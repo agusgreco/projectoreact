@@ -6,8 +6,8 @@ class Tarjeta extends Component {
         this.state ={
           tamanoOriginal: "32%",
           tamanoNuevo: "32%",
-          visibilityOriginal: "none",
-          visibilityNuevo: "none",
+          visibilityOriginal: "false",
+          visibilityNuevo: "false",
         }
       }
 
@@ -28,7 +28,6 @@ class Tarjeta extends Component {
       }
 
       verMas(tamano){
-        // if(this.state.tamanoOriginal !== "50%"){
           this.setState({
             tamanoNuevo: tamano,
           });
@@ -98,3 +97,21 @@ class Tarjeta extends Component {
 }
 
 export default Tarjeta;
+
+
+
+// agregarTarjetas(){
+//   console.log("se agregaron 6 tarjetas")
+//   fetch("https://randomuser.me/api/?results=6")
+//   .then(result => result.json())
+//   .then(data => {
+//     this.setState({datos: data.results})
+//     {this.state.datos.map((unaTarjeta, idx) =>(
+//       <div className="unaTarjeta" key={idx}>
+//         <Tarjeta tarjetaAMostrar={unaTarjeta}/>
+//       </div>
+//      ))}
+//     // this.state.datos.push(data.result);
+//     // this.setState({datos: this.state.datos})
+//   })
+// }
