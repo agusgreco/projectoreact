@@ -11,7 +11,7 @@ class Tira extends Component{
         }
      }  
      componentDidMount(){
-        fetch("https://randomuser.me/api/?results=12")
+        fetch("https://randomuser.me/api/?results=10")
         .then(result => result.json())
         .then(data => {
           this.setState({datos: data.results})
@@ -28,22 +28,20 @@ class Tira extends Component{
      }
 
 agregarTarjetas(){
-  console.log("se agregaron 6 tarjetas")
-  fetch("https://randomuser.me/api/?results=6")
+  console.log("se agregaron 5 tarjetas")
+  fetch("https://randomuser.me/api/?results=5")
   .then(result => result.json())
   .then(data => {
-    this.setState({datos: data.results})
-    {this.state.datos.map((unaTarjeta, idx) =>(
-      <div className="unaTarjeta" key={idx}>
-        <Tarjeta tarjetaAMostrar={unaTarjeta}/>
-      </div>
-     ))}
-    // this.state.datos.push(data.result);
-    // this.setState({datos: this.state.datos})
+    {data.results.map((unaTarjeta) =>{
+     this.state.datos.push(unaTarjeta)
+
+    })}
+    this.setState({datos:this.state.datos});
+
   })
 }
 
-      
+
       // filtrarPorNombre(evento){
       //   this.setState({value: evento.target.value})
       // }
@@ -140,12 +138,16 @@ agregarTarjetas(){
           var escrito = evento.target.value
           let datos = this.state.datos
           let filtrado = datos.filter((dato) => {
+      
             let itemData = dato.dob.age
-            let textData = escrito
-            // let textData = parseInt(escrito)
+            // let textData = escrito
+            let textData = parseInt(escrito)
+            console.log(textData + " "+ itemData)
             return itemData === textData
           })
-          this.setState({ datos: filtrado})
+          this.setState({ datos: filtrado })
+          //setear above en otra var de estado
+          console.log(filtrado)
         } else {
           fetch("https://randomuser.me/api/?results=12")
           .then(result => result.json())
