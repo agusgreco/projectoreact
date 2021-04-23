@@ -138,6 +138,7 @@ class Tira extends Component{
           let filtrado = datos.filter((dato) => {
             let itemData = dato.dob.age
             let textData = escrito
+            // let textData = parseInt(escrito)
             return itemData === textData
           })
           this.setState({ datos: filtrado})
