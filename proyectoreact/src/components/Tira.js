@@ -64,23 +64,28 @@ class Tira extends Component{
 
       // filtrarPorNombre(evento){
       //    if (evento.target.value.length !== 0) {
+      //     var escrito = evento.target.value
       //     fetch("https://randomuser.me/api/")
       //     .then(result => result.json())
-      //     var escrito = evento.target.value
       //     // let datos = this.state.datos
       //     .then(data => {
       //       this.setState({datos: data.results})
       //       let filtrado = data.filter((dato) => {
-      //         let itemData = dato.name.first.toUpperCase()
-      //         let textData = escrito.toUpperCase()
-      //         return itemData.indexOf(textData) >= 0
+      //       let itemData = dato.name.first.toUpperCase()
+      //       let textData = escrito.toUpperCase()
+      //       return itemData.indexOf(textData) >= 0
       //       })
       //       this.setState({data: filtrado})
       //     })          
       //     // this.setState({ datos: filtrado})
       //    // this.setState({ datos: filtrado, loEscrito: escrito})
       //   } else {
-      //     this.setState({datos: this.state.datos})
+      //     fetch("https://randomuser.me/api/?results=12")
+      //     .then(result => result.json())
+      //     .then(data => {
+      //       this.setState({datos: data.results})
+      //       console.log(data)
+      //     })
       //   }
       // }
 
@@ -96,7 +101,6 @@ class Tira extends Component{
           this.setState({ datos: filtrado})
          // this.setState({ datos: filtrado, loEscrito: escrito})
         } else {
-          // this.setState({datos: this.state.datos})
           fetch("https://randomuser.me/api/?results=12")
           .then(result => result.json())
           .then(data => {
@@ -117,8 +121,6 @@ class Tira extends Component{
           })
           this.setState({ datos: filtrado})
         } else {
-          // this.setState({datos: evento.target.value})
-          // this.setState({datos: this.state.datos})
           fetch("https://randomuser.me/api/?results=12")
           .then(result => result.json())
           .then(data => {
