@@ -16,6 +16,7 @@ class Tira extends Component{
         .then(data => {
           this.setState({datos: data.results})
           console.log(data)
+          console.log(data.results[0].location.postcode)
         })
       }
       
@@ -133,6 +134,27 @@ agregarTarjetas(){
         }
       }
 
+      filtrarPorEmail(evento){
+        if (evento.target.value.length !== 0) {
+          var escrito = evento.target.value
+          let datos = this.state.datos
+          let filtrado = datos.filter((dato) => {
+            let itemData = dato.email.toUpperCase()
+            let textData = escrito.toUpperCase()
+            return itemData.indexOf(textData) >= 0
+          })
+          this.setState({ datos: filtrado})
+        } else {
+          fetch("https://randomuser.me/api/?results=12")
+          .then(result => result.json())
+          .then(data => {
+            this.setState({datos: data.results})
+            console.log(data)
+          })
+
+        }
+      }
+
       filtrarPorEdad(evento){
         if (evento.target.value.length !== 0) {
           var escrito = evento.target.value
@@ -142,7 +164,7 @@ agregarTarjetas(){
             let itemData = dato.dob.age
             // let textData = escrito
             let textData = parseInt(escrito)
-            console.log(textData + " "+ itemData)
+            console.log(textData + " " + itemData)
             return itemData === textData
           })
           this.setState({ datos: filtrado })
@@ -186,6 +208,12 @@ agregarTarjetas(){
                 <form>
                   Apellido: {this.state.value}  
                   <input type="text" onChange={(escrito) => this.filtrarPorApellido(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" />
+                  {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
+                </form>
+
+                <form>
+                  Email: {this.state.value}  
+                  <input type="text" onChange={(escrito) => this.filtrarPorEmail(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" />
                   {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
                 </form>
 
