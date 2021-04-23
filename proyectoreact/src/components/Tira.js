@@ -38,6 +38,52 @@ class Tira extends Component{
         })
       }
 
+      
+      // filtrarPorNombre(evento){
+      //   this.setState({value: evento.target.value})
+      // }
+
+      // filtrarPorApellido(evento){
+      //   this.setState({value: evento.target.value})
+      // }
+
+      // filtrarPorEdad(evento){
+      //   this.setState({value: evento.target.value})
+      // }
+
+          // filtrarTarjetas(lobuscado){
+      //   let resultado = this.state.datos.filter( (persona) => {
+      //     return persona.name.first || persona.name.last || persona.dob.age === lobuscado
+      //   });
+      //   this.setState({value: resultado});
+      //   console.log(this.state.datos)
+      // }
+
+
+
+
+      // filtrarPorNombre(evento){
+      //    if (evento.target.value.length !== 0) {
+      //     fetch("https://randomuser.me/api/")
+      //     .then(result => result.json())
+      //     var escrito = evento.target.value
+      //     // let datos = this.state.datos
+      //     .then(data => {
+      //       this.setState({datos: data.results})
+      //       let filtrado = data.filter((dato) => {
+      //         let itemData = dato.name.first.toUpperCase()
+      //         let textData = escrito.toUpperCase()
+      //         return itemData.indexOf(textData) >= 0
+      //       })
+      //       this.setState({data: filtrado})
+      //     })          
+      //     // this.setState({ datos: filtrado})
+      //    // this.setState({ datos: filtrado, loEscrito: escrito})
+      //   } else {
+      //     this.setState({datos: this.state.datos})
+      //   }
+      // }
+
       filtrarPorNombre(evento){
         if (evento.target.value.length !== 0) {
           var escrito = evento.target.value
@@ -47,9 +93,16 @@ class Tira extends Component{
             let textData = escrito.toUpperCase()
             return itemData.indexOf(textData) >= 0
           })
-          this.setState({ datos: filtrado, loEscrito: escrito})
+          this.setState({ datos: filtrado})
+         // this.setState({ datos: filtrado, loEscrito: escrito})
         } else {
-          this.setState({datos: evento.target.value})
+          // this.setState({datos: this.state.datos})
+          fetch("https://randomuser.me/api/?results=12")
+          .then(result => result.json())
+          .then(data => {
+            this.setState({datos: data.results})
+            console.log(data)
+          })
         }
       }
 
@@ -62,9 +115,17 @@ class Tira extends Component{
             let textData = escrito.toUpperCase()
             return itemData.indexOf(textData) >= 0
           })
-          this.setState({ datos: filtrado, loEscrito: escrito})
+          this.setState({ datos: filtrado})
         } else {
-          this.setState({datos: evento.target.value})
+          // this.setState({datos: evento.target.value})
+          // this.setState({datos: this.state.datos})
+          fetch("https://randomuser.me/api/?results=12")
+          .then(result => result.json())
+          .then(data => {
+            this.setState({datos: data.results})
+            console.log(data)
+          })
+
         }
       }
 
@@ -77,20 +138,18 @@ class Tira extends Component{
             let textData = escrito
             return itemData.indexOf(textData) >= 0
           })
-          this.setState({ datos: filtrado, loEscrito: escrito})
+          this.setState({ datos: filtrado})
         } else {
-          this.setState({datos: evento.target.value})
+          fetch("https://randomuser.me/api/?results=12")
+          .then(result => result.json())
+          .then(data => {
+            this.setState({datos: data.results})
+            console.log(data)
+          })
         }
       }
 
-      // filtrarTarjetas(lobuscado){
-      //   let resultado = this.state.datos.filter( (persona) => {
-      //     return persona.name.first || persona.name.last || persona.dob.age === lobuscado
-      //   });
-      //   this.setState({value: resultado});
-      //   console.log(this.state.datos)
-      // }
-      
+        
       cambiarVertice(hov){
         if(this.state.vistaOriginal !== ""){
           this.setState({
@@ -110,21 +169,21 @@ class Tira extends Component{
                 {/* <form action="/" method="get" onSubmit={this.filtrarTarjetas.bind(this)}> */}
                 <form >
                     Nombre: {this.state.value}  
-                    <input type="text" onChange={(escrito) => this.filtrarPorNombre(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" />
-                    <button className="botonn" type="submit" value="Submit">ENTER</button>
+                    <input type="text" value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" onChange={(escrito) => this.filtrarPorNombre(escrito)} />
+                    {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
                              {/* onClick={this.filtrarTarjetas.bind(this)} */}
                 </form>
 
                 <form>
                   Apellido: {this.state.value}  
                   <input type="text" onChange={(escrito) => this.filtrarPorApellido(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" />
-                  <button className="botonn" type="submit" value="Submit">ENTER</button>
+                  {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
                 </form>
 
                 <form>
                   Edad: {this.state.value}  
                   <input type="text" onChange={(escrito) => this.filtrarPorEdad(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" />
-                  <button className="botonn" type="submit" value="Submit">ENTER</button>
+                  {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
                 </form>
                 {/* <form onSubmit={this.filtrarTarjetas.bind(this)}>
                   Edad: {this.state.value}  
