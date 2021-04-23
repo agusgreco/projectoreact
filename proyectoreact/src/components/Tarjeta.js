@@ -42,10 +42,9 @@ class Tarjeta extends Component {
         }
       
 
-        // <div className="location words">{this.props.tarjetaAMostrar.location.street} {this.props.tarjetaAMostrar.location.city} {this.props.tarjetaAMostrar.location.state} {this.props.tarjetaAMostrar.location.postcode}</div>
    render(){
      let midiv =""
-      if(true){
+      if(this.state.visibilityNuevo="true"){
           midiv = <div><div className="words">Fecha de registro: {this.props.tarjetaAMostrar.registered.date}</div><div className="telefonos words">Telefono: {this.props.tarjetaAMostrar.phone} - {this.props.tarjetaAMostrar.cell}</div></div>
       }else{
           midiv = <div></div>
@@ -54,6 +53,7 @@ class Tarjeta extends Component {
     return (
       <div  className="tarjeta-text" style={{width: this.state.tamanoNuevo}} onMouseEnter={ () => this.verMas("50%")} onMouseLeave={ () => this.verMas(this.state.tamanoOriginal)}>
 
+        {/* <div className="location words">{this.props.tarjetaAMostrar.location.street} {this.props.tarjetaAMostrar.location.city} {this.props.tarjetaAMostrar.location.state} {this.props.tarjetaAMostrar.location.postcode}</div> */}
 
                       <div className="x">
                         <button type="button" className="borrar" onClick={this.props.onBorrar.bind(this, this.props.tarjetaAMostrar.id)}>  x </button>
@@ -70,7 +70,7 @@ class Tarjeta extends Component {
               
 
                   {midiv}
-                   <button type="button" onClick={ () => this.verDetalle("true")}>Ver detalle</button>
+                   <button type="button" style={{display: this.state.visibilityNuevo}} onClick={ () => this.verDetalle("true")}>Ver detalle</button>
 
                   {/* <div  style={{display: this.state.visibilityNuevo}} 
                   //  onClick={ () => this.verDetalle("block")}
