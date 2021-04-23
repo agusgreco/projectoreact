@@ -33,6 +33,7 @@ class Tira extends Component{
         .then(result => result.json())
         .then(data => {
           this.state.datos.push(data.result);
+          // this.setState({datos: data.results, nextpage: data.info.next})
           this.setState({datos: this.state.datos})
         })
       }
