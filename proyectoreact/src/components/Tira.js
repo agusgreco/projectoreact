@@ -27,17 +27,21 @@ class Tira extends Component{
         console.log(this.state.datos)
      }
 
-     agregarTarjetas(){
-        console.log("se agregaron 6 tarjetas")
-        fetch("https://randomuser.me/api/?results=6")
-        .then(result => result.json())
-        .then(data => {
-          this.state.datos.push(data.result);
-          // this.setState({datos: data.results, nextpage: data.info.next})
-          //un map aca
-          this.setState({datos: this.state.datos})
-        })
-      }
+agregarTarjetas(){
+  console.log("se agregaron 6 tarjetas")
+  fetch("https://randomuser.me/api/?results=6")
+  .then(result => result.json())
+  .then(data => {
+    this.setState({datos: data.results})
+    {this.state.datos.map((unaTarjeta, idx) =>(
+      <div className="unaTarjeta" key={idx}>
+        <Tarjeta tarjetaAMostrar={unaTarjeta}/>
+      </div>
+     ))}
+    // this.state.datos.push(data.result);
+    // this.setState({datos: this.state.datos})
+  })
+}
 
       
       // filtrarPorNombre(evento){
