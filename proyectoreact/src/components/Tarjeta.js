@@ -33,19 +33,25 @@ class Tarjeta extends Component {
             tamanoNuevo: tamano,
           });
           console.log("viendo detalle");
-        // }
       }
 
       verDetalle(visibility){
-          this.setState({
-            visibilityNuevo: visibility,
-          });
-          console.log("con visibility");
-      }
+            this.setState({
+             visibilityNuevo: visibility,
+            });
+           console.log("con visibility");
+        }
       
 
-   
+        // <div className="location words">{this.props.tarjetaAMostrar.location.street} {this.props.tarjetaAMostrar.location.city} {this.props.tarjetaAMostrar.location.state} {this.props.tarjetaAMostrar.location.postcode}</div>
    render(){
+     let midiv =""
+      if(true){
+          midiv = <div><div className="words">Fecha de registro: {this.props.tarjetaAMostrar.registered.date}</div><div className="telefonos words">Telefono: {this.props.tarjetaAMostrar.phone} - {this.props.tarjetaAMostrar.cell}</div></div>
+      }else{
+          midiv = <div></div>
+      }
+
     return (
       <div  className="tarjeta-text" style={{width: this.state.tamanoNuevo}} onMouseEnter={ () => this.verMas("50%")} onMouseLeave={ () => this.verMas(this.state.tamanoOriginal)}>
 
@@ -62,10 +68,22 @@ class Tarjeta extends Component {
                         <div className="nombreyapellido words"> {this.props.tarjetaAMostrar.name.first} {this.props.tarjetaAMostrar.name.last} </div>
                         <div className="email words"> email: {this.props.tarjetaAMostrar.email}</div>
                         <div className="nacimientoyedad words">{this.props.tarjetaAMostrar.dob.date} - {this.props.tarjetaAMostrar.dob.age} ys </div>
-                        
+              
 
-                   {/* <button type="button" onClick={ () => this.verDetalle("block")}>Ver detalle</button>
-                   <div  style={{display: this.state.visibilityNuevo}} 
+                  {midiv}
+                   <button type="button" onClick={ () => this.verDetalle("true")}>Ver detalle</button>
+
+                  {/* <div  style={{display: this.state.visibilityNuevo}} 
+                  //  onClick={ () => this.verDetalle("block")}
+                  //  onMouseLeave={ () => this.verDetalle(this.state.visibilityOriginal)}
+                   >
+                        <div className="location words">{this.props.tarjetaAMostrar.location.street} {this.props.tarjetaAMostrar.location.city} {this.props.tarjetaAMostrar.location.state} {this.props.tarjetaAMostrar.location.postcode}</div>
+                        <div className="fecharegistro words">Fecha de registro: {this.props.tarjetaAMostrar.registered.date}</div>
+                        <div className="telefonos words">Telefono: {this.props.tarjetaAMostrar.phone} - {this.props.tarjetaAMostrar.cell}</div>
+                  </div> */}
+
+
+                   {/* <div  style={{display: this.state.visibilityNuevo}} 
                   //  onClick={ () => this.verDetalle("block")}
                   //  onMouseLeave={ () => this.verDetalle(this.state.visibilityOriginal)}
                    >

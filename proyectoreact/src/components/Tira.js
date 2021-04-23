@@ -28,12 +28,13 @@ class Tira extends Component{
      }
 
      agregarTarjetas(){
-        console.log("se agregaron 12 tarjetas")
+        console.log("se agregaron 6 tarjetas")
         fetch("https://randomuser.me/api/?results=6")
         .then(result => result.json())
         .then(data => {
           this.state.datos.push(data.result);
           // this.setState({datos: data.results, nextpage: data.info.next})
+          //un map aca
           this.setState({datos: this.state.datos})
         })
       }
@@ -137,7 +138,7 @@ class Tira extends Component{
           let filtrado = datos.filter((dato) => {
             let itemData = dato.dob.age
             let textData = escrito
-            return itemData.indexOf(textData) >= 0
+            return itemData === textData
           })
           this.setState({ datos: filtrado})
         } else {
