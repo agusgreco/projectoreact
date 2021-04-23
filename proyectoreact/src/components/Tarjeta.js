@@ -51,6 +51,8 @@ class Tarjeta extends Component {
           midiv = <div></div>
       }
 
+      
+
     return (
       <div  className="tarjeta-text" style={{width: this.state.tamanoNuevo}} onMouseEnter={ () => this.verMas("50%")} onMouseLeave={ () => this.verMas(this.state.tamanoOriginal)}>
 
@@ -69,7 +71,9 @@ class Tarjeta extends Component {
               
 
                   {midiv}
-                   <button type="button" style={{display: this.state.visibilityNuevo}} onClick={ () => this.verDetalle("true")}>Ver detalle</button>
+                   <button type="button" style={{display: this.state.visibilityNuevo}} onClick={ () => this.verDetalle("true")}>VER DETALLE</button>
+                   <button type="button" style={{display: this.state.visibilityNuevo}} onClick={ () => this.verDetalle("false")}>NO VER DETALLE</button>
+
 
                   {/* <div  style={{display: this.state.visibilityNuevo}} 
                   //  onClick={ () => this.verDetalle("block")}
