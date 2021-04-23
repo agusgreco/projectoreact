@@ -11,7 +11,7 @@ class Tira extends Component{
         }
      }  
      componentDidMount(){
-        fetch("https://randomuser.me/api/?results=10")
+        fetch("https://randomuser.me/api/?results=9")
         .then(result => result.json())
         .then(data => {
           this.setState({datos: data.results})
@@ -28,19 +28,17 @@ class Tira extends Component{
         console.log(this.state.datos)
      }
 
-agregarTarjetas(){
-  console.log("se agregaron 5 tarjetas")
-  fetch("https://randomuser.me/api/?results=5")
-  .then(result => result.json())
-  .then(data => {
-    {data.results.map((unaTarjeta) =>{
-     this.state.datos.push(unaTarjeta)
-
-    })}
-    this.setState({datos:this.state.datos});
-
-  })
-}
+     agregarTarjetas(){
+        console.log("se agregaron 6 tarjetas")
+        fetch("https://randomuser.me/api/?results=6")
+        .then(result => result.json())
+        .then(data => {
+          {data.results.map((unaTarjeta) =>{
+            this.state.datos.push(unaTarjeta)
+        })}
+        this.setState({datos:this.state.datos});
+        })
+      }
 
 
       // filtrarPorNombre(evento){
@@ -62,8 +60,6 @@ agregarTarjetas(){
       //   this.setState({value: resultado});
       //   console.log(this.state.datos)
       // }
-
-
 
 
       // filtrarPorNombre(evento){
@@ -194,30 +190,30 @@ agregarTarjetas(){
       return (
         <div className="rowbody">
             <div className="center">
-                <button className="boton" onClick={this.agregarTarjetas.bind(this)} > AGREGAR TARJETAS </button>
+                <button className="boton acomodar" onClick={this.agregarTarjetas.bind(this)} > AGREGAR TARJETAS </button>
                 
 
                 {/* <form action="/" method="get" onSubmit={this.filtrarTarjetas.bind(this)}> */}
-                <form >
+                <form className="acomodar">
                     Nombre: {this.state.value}  
                     <input type="text" value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" onChange={(escrito) => this.filtrarPorNombre(escrito)} />
                     {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
                              {/* onClick={this.filtrarTarjetas.bind(this)} */}
                 </form>
 
-                <form>
+                <form className="acomodar">
                   Apellido: {this.state.value}  
                   <input type="text" onChange={(escrito) => this.filtrarPorApellido(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" />
                   {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
                 </form>
 
-                <form>
+                <form className="acomodar">
                   Email: {this.state.value}  
                   <input type="text" onChange={(escrito) => this.filtrarPorEmail(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" />
                   {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
                 </form>
 
-                <form>
+                <form className="acomodar">
                   Edad: {this.state.value}  
                   <input type="text" onChange={(escrito) => this.filtrarPorEdad(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" />
                   {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
@@ -231,16 +227,15 @@ agregarTarjetas(){
 
                 {/* <button type="button" className="vertice" onClick={this.cambiarVertice.bind(this)}> CAMBIAR VERTICE </button> */}
 
-                </div>
-              <div className="acaEstanLasTarjetas">
+              </div>
 
-           {this.state.datos.map((unaTarjeta, idx) =>(
-                <div className="unaTarjeta" key={idx}>
-                  <Tarjeta tarjetaAMostrar={unaTarjeta}  onBorrar={this.borrarItem.bind(this)}/>
-                </div>
-            )) }
-            </div>
-
+            <div className="acaEstanLasTarjetas">
+                {this.state.datos.map((unaTarjeta, idx) =>(
+                  <div className="unaTarjeta" key={idx}>
+                    <Tarjeta tarjetaAMostrar={unaTarjeta}  onBorrar={this.borrarItem.bind(this)}/>
+                  </div>
+                  )) }
+              </div>
         </div>
       )
     }
