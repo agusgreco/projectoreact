@@ -75,10 +75,9 @@ class Tira extends Component{
       //       let textData = escrito.toUpperCase()
       //       return itemData.indexOf(textData) >= 0
       //       })
+      //       // this.setState({datos: filtrado})
       //       this.setState({data: filtrado})
       //     })          
-      //     // this.setState({ datos: filtrado})
-      //    // this.setState({ datos: filtrado, loEscrito: escrito})
       //   } else {
       //     fetch("https://randomuser.me/api/?results=12")
       //     .then(result => result.json())
