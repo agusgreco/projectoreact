@@ -38,24 +38,57 @@ class Tira extends Component{
       }
 
       filtrarPorNombre(evento){
-        this.setState({value: evento.target.value})
+        if (evento.target.value.length !== 0) {
+          var escrito = evento.target.value
+          let datos = this.state.datos
+          let filtrado = datos.filter((dato) => {
+            let itemData = dato.name.first.toUpperCase()
+            let textData = escrito.toUpperCase()
+            return itemData.indexOf(textData) >= 0
+          })
+          this.setState({ datos: filtrado, loEscrito: escrito})
+        } else {
+          this.setState({datos: evento.target.value})
+        }
       }
 
       filtrarPorApellido(evento){
-        this.setState({value: evento.target.value})
+        if (evento.target.value.length !== 0) {
+          var escrito = evento.target.value
+          let datos = this.state.datos
+          let filtrado = datos.filter((dato) => {
+            let itemData = dato.name.last.toUpperCase()
+            let textData = escrito.toUpperCase()
+            return itemData.indexOf(textData) >= 0
+          })
+          this.setState({ datos: filtrado, loEscrito: escrito})
+        } else {
+          this.setState({datos: evento.target.value})
+        }
       }
 
       filtrarPorEdad(evento){
-        this.setState({value: evento.target.value})
+        if (evento.target.value.length !== 0) {
+          var escrito = evento.target.value
+          let datos = this.state.datos
+          let filtrado = datos.filter((dato) => {
+            let itemData = dato.dob.age
+            let textData = escrito
+            return itemData.indexOf(textData) >= 0
+          })
+          this.setState({ datos: filtrado, loEscrito: escrito})
+        } else {
+          this.setState({datos: evento.target.value})
+        }
       }
 
-      filtrarTarjetas(lobuscado){
-        let resultado = this.state.datos.filter( (persona) => {
-          return persona.name.first || persona.name.last || persona.dob.age === lobuscado
-        });
-        this.setState({value: resultado});
-        console.log(this.state.datos)
-      }
+      // filtrarTarjetas(lobuscado){
+      //   let resultado = this.state.datos.filter( (persona) => {
+      //     return persona.name.first || persona.name.last || persona.dob.age === lobuscado
+      //   });
+      //   this.setState({value: resultado});
+      //   console.log(this.state.datos)
+      // }
       
       cambiarVertice(hov){
         if(this.state.vistaOriginal !== ""){
@@ -74,25 +107,29 @@ class Tira extends Component{
                 
 
                 {/* <form action="/" method="get" onSubmit={this.filtrarTarjetas.bind(this)}> */}
-                <form onSubmit={this.filtrarTarjetas.bind(this)}>
-
+                <form >
                     Nombre: {this.state.value}  
-                    <input type="text" value={this.state.value} className="input" id="header-search" placeholder="Filtrar" onChange={this.filtrarPorNombre.bind(this)}/>
+                    <input type="text" onChange={(escrito) => this.filtrarPorNombre(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" />
                     <button className="botonn" type="submit" value="Submit">ENTER</button>
                              {/* onClick={this.filtrarTarjetas.bind(this)} */}
                 </form>
 
-                <form onSubmit={this.filtrarTarjetas.bind(this)}>
+                <form>
                   Apellido: {this.state.value}  
-                  <input type="text" value={this.state.value} className="input" id="header-search" placeholder="Filtrar" onChange={this.filtrarPorApellido.bind(this)}/>
+                  <input type="text" onChange={(escrito) => this.filtrarPorApellido(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" />
                   <button className="botonn" type="submit" value="Submit">ENTER</button>
                 </form>
 
-                <form onSubmit={this.filtrarTarjetas.bind(this)}>
+                <form>
+                  Edad: {this.state.value}  
+                  <input type="text" onChange={(escrito) => this.filtrarPorEdad(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="Filtrar" />
+                  <button className="botonn" type="submit" value="Submit">ENTER</button>
+                </form>
+                {/* <form onSubmit={this.filtrarTarjetas.bind(this)}>
                   Edad: {this.state.value}  
                   <input type="text" value={this.state.value} className="input" id="header-search" placeholder="Filtrar" onChange={this.filtrarPorEdad.bind(this)}/>
                   <button className="botonn" type="submit" value="Submit">ENTER</button>
-                </form>
+                </form> */}
 
 
                 {/* <button type="button" className="vertice" onClick={this.cambiarVertice.bind(this)}> CAMBIAR VERTICE </button> */}
