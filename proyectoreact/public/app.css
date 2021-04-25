@@ -4,6 +4,7 @@
 
 body{
     margin: 0%;
+    background-color: black;
 }
 
 /* ul{
@@ -34,6 +35,9 @@ body{
     margin-top: 17px;
     margin-left: 10px;
     margin-bottom: 5px;
+    color: #009999;
+    font-family: Calibri;
+
 }
 
 .acaEstanLasTarjetas {
@@ -45,17 +49,22 @@ body{
     margin-right: 10px;
     width: 170px;
     height: 25px;
-    background-color: #000d1e;
+    background-color: #009999;
     border-radius: 7px;
     border-width: 0px;
     font-size: 15px;
     color: white;
+    text-align: center;
     cursor: pointer;
+    font-family: Calibri;
+
 }
 
 .input{
     border-radius: 5px;
     height: 23px;
+    font-family: Calibri;
+    text-align: center;
     width: 80px;
     border-width: 2px;
     border-style: groove;
@@ -73,10 +82,10 @@ body{
     cursor: pointer;
 }
 .ache1{
-    background-color: #000d1e;
+    background-color:black;
     text-align: center;
     font-family: verdana;
-    color: #4b7472;
+    color: #009999;
     margin-top: 0%;
     margin-bottom: 0%;
     margin-block-start: 0%;
@@ -117,13 +126,15 @@ html{
     padding-bottom: 15px;
     text-align: center;
     font-size: 17px;
-    color: #B5A44E;
-    background-color: #4b7472;
+    color: #0c1520a8;
+    background-color: #009999;
     margin-left: 1%;
     margin-right: 0%;
     margin-top: 10px;
     float: left;
     border-radius: 5px;
+    font-family: Calibri;
+    font-weight: bold;
 }
 .borrar{
     width: 20px;
@@ -147,11 +158,12 @@ html{
     align-items: center;
     margin-top: 5px;
     width: 100px;
-    height: 23px;
+    height: 32px;
     background-color: #0c1520a8;
     border-radius: 7px;
     border-width: 0px;
-    font-size: 13px;
+    font-family: Calibri;
+    font-size: 15px;
     color: white;
     cursor: pointer;
 }
@@ -160,17 +172,18 @@ html{
     margin-top: 0px;
     margin-left: 5px;
     width: 120px;
-    height: 23px;
+    font-family: Calibri;
+    height: 32px;
     background-color: #0c1520a8;
     border-radius: 7px;
     border-width: 0px;
-    font-size: 13px;
+    font-size: 15px;
     color: white;
     cursor: pointer;
 }
 
 footer{
-    background-color: #000d1e;
+    background-color: black;
     text-align: center;
     font-family: verdana;
     position: fixed;
@@ -180,8 +193,10 @@ footer{
 }
 
 a{
-    color: #4b7472; 
+    color:#009999; 
     text-decoration: none;
+    font-family: Calibri;
+    font-size: 18px;
 }
 
 .App{

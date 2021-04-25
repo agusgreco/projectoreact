@@ -19,8 +19,8 @@ function App() {
           </div>
 
           <div className="footerclass">
-           <a target="_blank" rel="noopener noreferrer" className="text-white" href="https://www.instagram.com/agusgreco_/">Agustina Greco -  </a>
-            <a target="_blank" rel="noopener noreferrer" className="text-whitee" href="https://www.instagram.com/emajrz/">Ema Juarez</a>
+           <a target="_blank" rel="noopener noreferrer" className="text-white" href="https://www.instagram.com/agusgreco_/">AGUSTINA GRECO -  </a>
+            <a target="_blank" rel="noopener noreferrer" className="text-whitee" href="https://www.instagram.com/emajrz/">EMA JUAREZ</a>
             
           </div>
         </div>
