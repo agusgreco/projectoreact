@@ -31,14 +31,14 @@ class Tarjeta extends Component {
           this.setState({
             tamanoNuevo: tamano,
           });
-          console.log("viendo detalle");
+          console.log("viendo mas");
       }
 
       verDetalle(visibility){
             this.setState({
              visibilityNuevo: visibility,
             });
-           console.log("con visibility");
+           console.log("viendo detalle");
         }
       
 
@@ -61,7 +61,8 @@ class Tarjeta extends Component {
       >
            <div className="x">
               <button type="button" className="borrar" onClick={this.props.onBorrar.bind(this, this.props.tarjetaAMostrar.id)}>  x </button>
-            </div>                           
+            </div>    
+                                   
                          
                         {/* <div className="image">  */}
                           <img alt="foto" src={this.props.tarjetaAMostrar.picture.large}/> 
