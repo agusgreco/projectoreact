@@ -43,52 +43,6 @@ class Tira extends Component{
       }
 
 
-      // filtrarPorNombre(evento){
-      //   this.setState({value: evento.target.value})
-      // }
-
-      // filtrarPorApellido(evento){
-      //   this.setState({value: evento.target.value})
-      // }
-
-      // filtrarPorEdad(evento){
-      //   this.setState({value: evento.target.value})
-      // }
-
-          // filtrarTarjetas(lobuscado){
-      //   let resultado = this.state.datos.filter( (persona) => {
-      //     return persona.name.first || persona.name.last || persona.dob.age === lobuscado
-      //   });
-      //   this.setState({value: resultado});
-      //   console.log(this.state.datos)
-      // }
-
-
-      // filtrarPorNombre(evento){
-      //    if (evento.target.value.length !== 0) {
-      //     var escrito = evento.target.value
-      //     fetch("https://randomuser.me/api/")
-      //     .then(result => result.json())
-      //     // let datos = this.state.datos
-      //     .then(data => {
-      //       this.setState({datos: data.results})
-      //       let filtrado = data.filter((dato) => {
-      //       let itemData = dato.name.first.toUpperCase()
-      //       let textData = escrito.toUpperCase()
-      //       return itemData.indexOf(textData) >= 0
-      //       })
-      //       // this.setState({datos: filtrado})
-      //       this.setState({data: filtrado})
-      //     })          
-      //   } else {
-      //     fetch("https://randomuser.me/api/?results=12")
-      //     .then(result => result.json())
-      //     .then(data => {
-      //       this.setState({datos: data.results})
-      //       console.log(data)
-      //     })
-      //   }
-      // }
 
       filtrarPorNombre(evento){
         if (evento.target.value.length !== 0) {
@@ -166,7 +120,6 @@ class Tira extends Component{
             return itemData === textData
           })
           this.setState({ datos: filtrado })
-          //setear above en otra var de estado
           console.log(filtrado)
         } else {
           fetch("https://randomuser.me/api/?results=12")
