@@ -43,8 +43,6 @@ class Tira extends Component{
         })
       }
 
-
-
       filtrarPorNombre(evento){
         if (evento.target.value.length !== 0) {
           var escrito = evento.target.value
@@ -152,15 +150,12 @@ class Tira extends Component{
       //   }
       //   }
 
-
-
      render(){
       return (
         <div className="rowbody">
             <div className="center">
                 <button className="boton acomodar" style={{fontWeight: "bold"}}onClick={this.agregarTarjetas.bind(this)} > AGREGAR TARJETAS </button>
-                
-
+  
                 <form className="acomodar enblanco">
                     Nombre: 
                     {/* {this.state.value}   */}
@@ -188,19 +183,13 @@ class Tira extends Component{
                   <option onClick={ () => this.filtrarPorGenero("female")}>FEMALE</option>
                   <option onClick={ () => this.filtrarPorGenero("male")}>MALE</option>
                 </select> */}
-
-                   
-
+                
               </div>
-
-
-
-
 
             <div className="acaEstanLasTarjetas">
                 {this.state.datos.map((unaTarjeta, idx) =>(
                   <div className="unaTarjeta" key={idx}>
-                    <Tarjeta tarjetaAMostrar={unaTarjeta}  onBorrar={this.borrarItem.bind(this)}/>
+                    <Tarjeta tarjetaAMostrar={unaTarjeta} onBorrar={this.borrarItem.bind(this)}/>
                   </div>
                   )) }
               </div>
