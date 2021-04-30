@@ -69,7 +69,7 @@ class Tarjeta extends Component {
                         {/* </div> */}
                         <div className="nombreyapellido words"> NOMBRE: {this.props.tarjetaAMostrar.name.first} {this.props.tarjetaAMostrar.name.last} </div>
                         <div className="email words"> MAIL: {this.props.tarjetaAMostrar.email}</div>
-                        <div className="nacimientoyedad words">FECHA DE NACIMIENTO:{this.props.tarjetaAMostrar.dob.date} - EDAD: {this.props.tarjetaAMostrar.dob.age} ys </div>
+                        <div className="nacimientoyedad words">({this.props.tarjetaAMostrar.dob.date} - {this.props.tarjetaAMostrar.dob.age} ys)</div>
               
                   {midiv}
                    <button type="button" className="buttonDetalle" style={{display: this.state.visibilityNuevo}} onClick={ () => this.verDetalle("true")}>VER DETALLE</button>
