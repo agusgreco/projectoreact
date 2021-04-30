@@ -234,7 +234,9 @@ class Tira extends Component{
                 Genero:
                 <select className="acomodar">
                   <option onClick={this.filtrarPorGeneroM.bind(this, this.state.datos.gender)}>FEMALE</option>
-                  <option onClick={this.filtrarPorGeneroH.bind(this, this.state.datos.gender)}>MALE</option>
+                  {/* <option onClick={this.filtrarPorGeneroH.bind(this, this.state.datos.gender)}>MALE</option> */}
+                  <option onClick={(genero) => this.filtrarPorGeneroH(genero)}>MALE</option>
+
                 </select>
 
                    
