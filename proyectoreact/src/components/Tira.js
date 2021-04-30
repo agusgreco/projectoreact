@@ -10,6 +10,7 @@ class Tira extends Component{
           value: "",
           tamanoOriginal: "32%",
           tamanoNuevo: "32%",
+          genero: [],
         }
      }  
      componentDidMount(){
@@ -131,29 +132,27 @@ class Tira extends Component{
         }
       }
 
-      filtrarPorGeneroM(female){
-        let resultado = this.state.datos.filter( (dato) => {
-          return dato.gender === female
-        });
-        this.setState({datos: resultado});
-        console.log(this.state.datos)
-        }
+      // filtrarPorGeneroM(generom){
+      //   this.setState({
+      //     genero: generom,
+      //    })
+      //   if(this.state.genero ==="female"){
+      //     let resultado = this.state.datos.filter( (dato) => {
+      //       return dato.gender === generom
+      //     });
+      //     this.setState({datos: resultado});
+      //     console.log(this.state.datos)
+      //   }
+      //   else{
+      //     let resultado = this.state.datos.filter( (dato) => {
+      //       return dato.gender === "male"
+      //     });
+      //     this.setState({datos: resultado});
+      //     console.log(this.state.datos)
+      //   }
+      //   }
 
-        filtrarPorGeneroH(genero){
-          let resultado = this.state.datos.filter( (dato) => {
-            return dato.gender === genero
-          });
-          this.setState({datos: resultado});
-          console.log(this.state.datos)
-          }
 
-
-    //   verMasGrande(tamano){
-    //     this.setState({
-    //       tamanoNuevo: tamano,
-    //     });
-    //     console.log("viendo detalle");
-    // }
 
      render(){
       return (
@@ -184,24 +183,18 @@ class Tira extends Component{
                   <input type="text" onChange={(escrito) => this.filtrarPorEdad(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="FILTRAR" />
                 </form>
 
-                Genero:
+                {/* Genero:
                 <select className="acomodar">
-                  <option onClick={this.filtrarPorGeneroM.bind(this, this.state.datos.gender)}>FEMALE</option>
-                  {/* <option onClick={this.filtrarPorGeneroH.bind(this, this.state.datos.gender)}>MALE</option> */}
-                  <option onClick={(genero) => this.filtrarPorGeneroH(genero)}>MALE</option>
-
-                </select>
+                  <option onClick={ () => this.filtrarPorGenero("female")}>FEMALE</option>
+                  <option onClick={ () => this.filtrarPorGenero("male")}>MALE</option>
+                </select> */}
 
                    
-                  {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
 
               </div>
 
-              {/* <div  className="tarjeta-text" style={{width: this.state.tamanoNuevo}} 
-      onClick={ () => this.verMas("50%")} onMouseLeave={ () => this.verMas(this.state.tamanoOriginal)}
-      > */}
 
-                   {/* <button type="button" className="buttonMasGrande" style={{width: this.state.tamanoNuevo}} onClick={ () => this.verMasGrande("true")}>VER DETALLE</button> */}
+
 
 
             <div className="acaEstanLasTarjetas">
