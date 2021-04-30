@@ -182,6 +182,7 @@ class Tira extends Component{
                 <select className="acomodar">
                   <option onClick={ () => this.filtrarPorGenero("female")}>FEMALE</option>
                   <option onClick={ () => this.filtrarPorGenero("male")}>MALE</option>
+
                 </select> */}
                 
               </div>
