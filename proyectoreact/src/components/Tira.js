@@ -178,9 +178,9 @@ class Tira extends Component{
         }
       }
 
-      filtrarPorGeneroM(genero){
+      filtrarPorGeneroM(female){
         let resultado = this.state.datos.filter( (dato) => {
-          return dato.gender === "female"
+          return dato.gender === female
         });
         this.setState({datos: resultado});
         console.log(this.state.datos)
@@ -206,34 +206,29 @@ class Tira extends Component{
       return (
         <div className="rowbody">
             <div className="center">
-                <button className="boton acomodar" onClick={this.agregarTarjetas.bind(this)} > AGREGAR TARJETAS </button>
+                <button className="boton acomodar" style={{fontWeight: "bold"}}onClick={this.agregarTarjetas.bind(this)} > AGREGAR TARJETAS </button>
                 
 
-                {/* <form action="/" method="get" onSubmit={this.filtrarTarjetas.bind(this)}> */}
-                <form className="acomodar">
+                <form className="acomodar enblanco">
                     Nombre: 
                     {/* {this.state.value}   */}
                     <input type="text" value={this.state.escrito} className="input" id="header-search" placeholder="FILTRAR" onChange={(escrito) => this.filtrarPorNombre(escrito)} />
                     {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
-                             {/* onClick={this.filtrarTarjetas.bind(this)} */}
                 </form>
 
-                <form className="acomodar">
+                <form className="acomodar enblanco">
                   Apellido: 
                   <input type="text" onChange={(escrito) => this.filtrarPorApellido(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="FILTRAR" />
-                  {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
                 </form>
 
-                <form className="acomodar">
+                <form className="acomodar enblanco">
                   Email: 
                   <input type="text" onChange={(escrito) => this.filtrarPorEmail(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="FILTRAR" />
-                  {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
                 </form>
 
-                <form className="acomodar">
+                <form className="acomodar enblanco">
                   Edad:  
                   <input type="text" onChange={(escrito) => this.filtrarPorEdad(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="FILTRAR" />
-                  {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
                 </form>
 
                 Genero:

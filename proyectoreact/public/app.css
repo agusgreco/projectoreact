@@ -35,9 +35,12 @@ body{
     margin-top: 17px;
     margin-left: 10px;
     margin-bottom: 5px;
-    color: black;
     font-family: Calibri;
 
+}
+
+.enblanco{
+    color: white;
 }
 
 .acaEstanLasTarjetas {
