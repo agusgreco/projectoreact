@@ -154,12 +154,12 @@ class Tira extends Component{
       return (
         <div className="rowbody">
             <div className="center">
-                <button className="boton acomodar" style={{fontWeight: "bold"}}onClick={this.agregarTarjetas.bind(this)} > AGREGAR TARJETAS </button>
+                <button className="boton acomodar" style={{fontWeight: "bold"}} onClick={this.agregarTarjetas.bind(this)} > AGREGAR TARJETAS </button>
   
                 <form className="acomodar enblanco">
                     Nombre: 
                     {/* {this.state.value}   */}
-                    <input type="text" value={this.state.escrito} className="input" id="header-search" placeholder="FILTRAR" onChange={(escrito) => this.filtrarPorNombre(escrito)} />
+                    <input type="text" onChange={(escrito) => this.filtrarPorNombre(escrito)} value={this.state.escrito} className="input" id="header-search" placeholder="FILTRAR"  />
                     {/* <button className="botonn" type="submit" value="Submit">ENTER</button> */}
                 </form>
 
