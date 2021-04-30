@@ -45,7 +45,7 @@ class Tarjeta extends Component {
    render(){
      let midiv =""
      console.log(this.state.visibilityNuevo)
-      if(this.state.visibilityNuevo ==="true"){
+      if(this.state.visibilityNuevo === "true"){
           midiv = <div><div className="words">FECHA DE REGISTRO: {this.props.tarjetaAMostrar.registered.date}</div>
           <div className="telefonos words">TELEFONO: {this.props.tarjetaAMostrar.phone} - {this.props.tarjetaAMostrar.cell}</div> 
            <div className="location words"> UBICACION: {this.props.tarjetaAMostrar.location.street.name} {this.props.tarjetaAMostrar.location.street.number}, {this.props.tarjetaAMostrar.location.city}, {this.props.tarjetaAMostrar.location.state}, {this.props.tarjetaAMostrar.location.postcode}</div></div>

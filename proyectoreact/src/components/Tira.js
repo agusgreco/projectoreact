@@ -10,7 +10,7 @@ class Tira extends Component{
           value: "",
           tamanoOriginal: "32%",
           tamanoNuevo: "32%",
-          genero: [],
+          //genero: [],
         }
      }  
      componentDidMount(){
