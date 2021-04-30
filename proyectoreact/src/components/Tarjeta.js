@@ -45,7 +45,7 @@ class Tarjeta extends Component {
    render(){
      let midiv =""
      console.log(this.state.visibilityNuevo)
-      if(this.state.visibilityNuevo =="true"){
+      if(this.state.visibilityNuevo ==="true"){
           midiv = <div><div className="words">FECHA DE REGISTRO: {this.props.tarjetaAMostrar.registered.date}</div>
           <div className="telefonos words">TELEFONO: {this.props.tarjetaAMostrar.phone} - {this.props.tarjetaAMostrar.cell}</div> 
            <div className="location words"> UBICACION: {this.props.tarjetaAMostrar.location.street.name} {this.props.tarjetaAMostrar.location.street.number}, {this.props.tarjetaAMostrar.location.city}, {this.props.tarjetaAMostrar.location.state}, {this.props.tarjetaAMostrar.location.postcode}</div></div>
@@ -76,24 +76,6 @@ class Tarjeta extends Component {
                    <button type="button" className="buttonNoDetalle" style={{display: this.state.visibilityNuevo}} onClick={ () => this.verDetalle("false")}>NO VER DETALLE</button>
 
 
-                  {/* <div  style={{display: this.state.visibilityNuevo}} 
-                  //  onClick={ () => this.verDetalle("block")}
-                  //  onMouseLeave={ () => this.verDetalle(this.state.visibilityOriginal)}
-                   >
-                        <div className="location words">{this.props.tarjetaAMostrar.location.street} {this.props.tarjetaAMostrar.location.city} {this.props.tarjetaAMostrar.location.state} {this.props.tarjetaAMostrar.location.postcode}</div>
-                        <div className="fecharegistro words">Fecha de registro: {this.props.tarjetaAMostrar.registered.date}</div>
-                        <div className="telefonos words">Telefono: {this.props.tarjetaAMostrar.phone} - {this.props.tarjetaAMostrar.cell}</div>
-                  </div> */}
-
-
-                   {/* <div  style={{display: this.state.visibilityNuevo}} 
-                  //  onClick={ () => this.verDetalle("block")}
-                  //  onMouseLeave={ () => this.verDetalle(this.state.visibilityOriginal)}
-                   >
-                        <div className="location words">{this.props.tarjetaAMostrar.location.street} {this.props.tarjetaAMostrar.location.city} {this.props.tarjetaAMostrar.location.state} {this.props.tarjetaAMostrar.location.postcode}</div>
-                        <div className="fecharegistro words">Fecha de registro: {this.props.tarjetaAMostrar.registered.date}</div>
-                        <div className="telefonos words">Telefono: {this.props.tarjetaAMostrar.phone} - {this.props.tarjetaAMostrar.cell}</div>
-                  </div> */}
                         
 
         </div>
@@ -104,18 +86,4 @@ export default Tarjeta;
 
 
 
-// agregarTarjetas(){
-//   console.log("se agregaron 6 tarjetas")
-//   fetch("https://randomuser.me/api/?results=6")
-//   .then(result => result.json())
-//   .then(data => {
-//     this.setState({datos: data.results})
-//     {this.state.datos.map((unaTarjeta, idx) =>(
-//       <div className="unaTarjeta" key={idx}>
-//         <Tarjeta tarjetaAMostrar={unaTarjeta}/>
-//       </div>
-//      ))}
-//     // this.state.datos.push(data.result);
-//     // this.setState({datos: this.state.datos})
-//   })
-// }
+
